@@ -28,6 +28,7 @@ img {
 
 .title {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .title h1 {
@@ -103,8 +104,9 @@ img {
 
 .container {
   display: flex;
-  gap: .5em;
+  gap: 1.5em;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .container-segment {
