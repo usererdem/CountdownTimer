@@ -152,8 +152,9 @@ img {
 }
 
 .link img {
-  transition: transform .5s ease-in-out;
+  transition: all .3s ease-in-out;
   border-radius: 1rem;
+  transform: translateY(0px);
 }
 
 .link img:hover {
