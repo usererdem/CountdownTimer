@@ -1,14 +1,12 @@
 "use strict";
 
-/* const flipCard = document.querySelector(".flip-card"); */
+const countToDate = new Date('June 25, 2022 16:00:00').setHours(new Date().getHours() + 0)
 
-/* const countToDate = new Date("2022-06-25") */
-const countToDate = new Date('June 25, 2022 16:00:00').setHours(new Date().getHours())
 let previousTimeBetweenDates
 setInterval(() => {
   const currentDate = new Date()
   const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000)
-  if(timeBetweenDates < 0) {console.log("wow");}
+  if(timeBetweenDates < 0) {openModal()}
   flipAllCards(timeBetweenDates)
 
   previousTimeBetweenDates = timeBetweenDates
@@ -18,6 +16,7 @@ function flipAllCards(time) {
   const seconds = time % 60
   const minutes = Math.floor(time / 60) % 60
   const hours = Math.floor(time / 3600)
+
 
   flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10))
   flip(document.querySelector("[data-hours-ones]"), hours % 10)
@@ -59,4 +58,11 @@ function flip(flipCard, newNumber) {
 }
 
 /* Modal Window */
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
 
+function openModal() {
+  //console.log('Button clicked');
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+}
