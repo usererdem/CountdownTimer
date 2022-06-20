@@ -1,6 +1,10 @@
 "use strict";
 
-const countToDate = new Date('June 25, 2022 18:00:00').setHours(new Date().getHours())
+//BUG Countdown with hour value doesnt work, fix it later
+/* const countToDate = new Date('June 25, 2022 18:00:00').setHours(new Date().getHours()) */
+
+// 24 - 6 = 18:00:00 so (-6 for opening hour) and (+2 hours GMT difference) 
+const countToDate = new Date('June 25, 2022').setHours(new Date().getHours() -6 + 2)
 
 let previousTimeBetweenDates
 setInterval(() => {
