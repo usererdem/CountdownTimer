@@ -8,6 +8,7 @@ let previousTimeBetweenDates
 setInterval(() => {
   const currentDate = new Date()
   const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000)
+  if(timeBetweenDates < 0) {console.log("wow");}
   flipAllCards(timeBetweenDates)
 
   previousTimeBetweenDates = timeBetweenDates
