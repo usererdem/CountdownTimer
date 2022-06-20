@@ -1,6 +1,6 @@
 "use strict";
 
-const countToDate = new Date('June 25, 2022 16:00:00').setHours(new Date().getHours())
+const countToDate = new Date('June 25, 2022 18:00:00').setHours(new Date().getHours())
 
 let previousTimeBetweenDates
 setInterval(() => {
