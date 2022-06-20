@@ -53,7 +53,7 @@ body {
 }
 
 .flip-card .top-flip {
-  content: "5";
+  content: attr(data-current-number);
   position: absolute;
   width: 100%;
   animation: flip-top 250ms ease-in;
@@ -67,7 +67,7 @@ body {
 }
 
 .flip-card .bottom-flip {
-  content: "5";
+  content: attr(data-next-number);
   position: absolute;
   bottom: 0;
   width: 100%;
