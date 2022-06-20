@@ -3,7 +3,7 @@
 /* const flipCard = document.querySelector(".flip-card"); */
 
 /* const countToDate = new Date("2022-06-25") */
-const countToDate = new Date().setHours(new Date().getHours() + 24)
+const countToDate = new Date('June 25, 2022 16:00:00').setHours(new Date().getHours())
 let previousTimeBetweenDates
 setInterval(() => {
   const currentDate = new Date()
@@ -57,3 +57,6 @@ function flip(flipCard, newNumber) {
   });
   flipCard.append(topFlip, bottomFlip);
 }
+
+/* Modal Window */
+
