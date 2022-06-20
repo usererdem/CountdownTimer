@@ -5,14 +5,30 @@
 }
 
 body {
- /*  background-color: #1C2128; */
- background-color: #f2f1ed;
-  color: #de4848;
+ 
+  background: linear-gradient(to right top, #0074b7, #003b73);
+  color: #016aa7;
   font-weight: bold;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 p {
   font-size: 2rem;
+  color: white;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  color: rgb(227, 242, 255);
 }
 
 .flip-card {
