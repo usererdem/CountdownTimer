@@ -1,6 +1,6 @@
 "use strict";
 
-const countToDate = new Date('June 25, 2022 16:00:00').setHours(new Date().getHours() + 0)
+const countToDate = new Date('June 25, 2022 16:00:00').setHours(new Date().getHours())
 
 let previousTimeBetweenDates
 setInterval(() => {
@@ -15,10 +15,12 @@ setInterval(() => {
 function flipAllCards(time) {
   const seconds = time % 60
   const minutes = Math.floor(time / 60) % 60
-  const hours = Math.floor(time / 3600)
+  const hours = Math.floor(time / 3600) % 24
+  const days = Math.floor(time / 86400)
 
-
-  flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10))
+  flip(document.querySelector("[data-days-tens]"), Math.floor(days / 10))
+  flip(document.querySelector("[data-days-ones]"), days % 10)
+  flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10) )
   flip(document.querySelector("[data-hours-ones]"), hours % 10)
   flip(document.querySelector("[data-minutes-tens]"), Math.floor(minutes / 10))
   flip(document.querySelector("[data-minutes-ones]"), minutes % 10)
