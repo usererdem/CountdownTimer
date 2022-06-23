@@ -5,7 +5,7 @@
 
 // 24 - 6 = 18:00:00 so (-6 for opening hour) and (+2 hours GMT difference) 
 /* const countToDate = new Date('June 25, 2022 18:00:00').setUTCHours(new Date().getUTCHours() -5) */
-const countToDate = new Date('June 25, 2022 18:00:00 GMT+1').getTime()
+const countToDate = new Date('June 25, 2022 19:00:00 GMT+1').getTime()
 console.log(countToDate);
 let previousTimeBetweenDates
 setInterval(() => {
