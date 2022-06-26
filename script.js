@@ -2,6 +2,7 @@
 
 // can be setHours instead of UTC aswell
 const countToDate = new Date().setUTCHours(new Date().getUTCHours() +40)
+// Use this to countdown from a specific day
 /* const countToDate = new Date('June 25, 2022 17:00:00 GMT+1').getTime() */
 console.log(countToDate);
 let previousTimeBetweenDates
