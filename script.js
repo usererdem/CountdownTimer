@@ -1,11 +1,8 @@
 "use strict";
 
-//BUG Countdown with hour value doesnt work, fix it later
-/* const countToDate = new Date('June 25, 2022 18:00:00').setHours(new Date().getHours()) */
-
-// 24 - 6 = 18:00:00 so (-6 for opening hour) and (+2 hours GMT difference) 
-/* const countToDate = new Date('June 25, 2022 18:00:00').setUTCHours(new Date().getUTCHours() -5) */
-const countToDate = new Date('June 25, 2022 17:00:00 GMT+1').getTime()
+// can be setHours instead of UTC aswell
+const countToDate = new Date().setUTCHours(new Date().getUTCHours() +40)
+/* const countToDate = new Date('June 25, 2022 17:00:00 GMT+1').getTime() */
 console.log(countToDate);
 let previousTimeBetweenDates
 setInterval(() => {
